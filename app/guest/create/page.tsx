@@ -219,7 +219,7 @@ function RecipePage({ onComplete, completeStep, router }: {
     <div style={{ minHeight: '100vh', backgroundColor: stone, color: dark }}>
       <div style={{ backgroundColor: dark, padding: '40px 28px 36px', position: 'relative' }}>
         <button onClick={() => router.push('/')} style={{ position: 'absolute', top: 32, right: 28, background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
-          <Image src="/tcf-logo-white.png" alt="TCF" width={32} height={32} style={{ opacity: 0.4 }} />
+          <Image src="/tcf-logo-white.svg" alt="TCF" width={32} height={32} style={{ opacity: 0.4 }} />
         </button>
         <p style={{ fontSize: 10, letterSpacing: '0.28em', textTransform: 'uppercase', color: gold, marginBottom: 10, fontFamily: 'var(--font-inter)' }}>
           The Cosmetic Formulary

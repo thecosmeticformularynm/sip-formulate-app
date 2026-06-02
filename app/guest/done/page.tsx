@@ -29,7 +29,7 @@ export default function DonePage() {
       )}
       <div style={{ position: 'absolute', top: 36, left: '50%', transform: 'translateX(-50%)', zIndex: 1 }}>
         <button onClick={() => router.push('/')} style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
-          <Image src="/tcf-logo-white.png" alt="The Cosmetic Formulary" width={40} height={40} style={{ opacity: 0.4 }} />
+          <Image src="/tcf-logo-white.svg" alt="The Cosmetic Formulary" width={40} height={40} style={{ opacity: 0.4 }} />
         </button>
       </div>
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1.2, ease: [0.25,0,0,1] }} style={{ position: 'relative', zIndex: 1 }}>

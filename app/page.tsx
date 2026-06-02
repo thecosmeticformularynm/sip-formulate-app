@@ -61,7 +61,7 @@ export default function Home() {
             style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', marginBottom: 28 }}
           >
             <Image
-              src="/tcf-logo-white.png"
+              src="/tcf-logo-white.svg"
               alt="The Cosmetic Formulary"
               width={68}
               height={68}

@@ -110,7 +110,7 @@ export default function StartPage() {
         {/* Logo — taps home */}
         <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 24 }}>
           <button onClick={() => router.push('/')} style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
-            <Image src="/tcf-logo-black.png" alt="The Cosmetic Formulary" width={44} height={44} style={{ opacity: 0.6 }} />
+            <Image src="/tcf-logo-black.svg" alt="The Cosmetic Formulary" width={44} height={44} style={{ opacity: 0.6 }} />
           </button>
         </div>
         <button onClick={() => phase === 'waiver' ? setPhase('details') : router.push('/')}
