@@ -28,17 +28,6 @@ export default function AdminPage() {
   const router = useRouter();
   const { adminAuthed, setAdminAuthed } = useStore();
 
-  if (!adminAuthed) {
-    return (
-      <PinEntry
-        title="Admin Access"
-        subtitle="Enter admin PIN to continue"
-        correctPin={ADMIN_PIN}
-        onSuccess={() => setAdminAuthed(true)}
-        onCancel={() => router.push('/')}
-      />
-    );
-  }
 
   return (
     <PageTransition>

@@ -197,19 +197,8 @@ export default function StaffPage() {
   const [tab, setTab] = useState<Tab>('overview');
   const [hydrated, setHydrated] = useState(false);
 
-  useEffect(() => setHydrated(true), []);
+  useEffect(() => { setHydrated(true); setStaffAuthed(true); }, []);
 
-  if (!staffAuthed) {
-    return (
-      <PinEntry
-        title="Staff Access"
-        subtitle="Enter your PIN to continue"
-        correctPin={STAFF_PIN}
-        onSuccess={() => setStaffAuthed(true)}
-        onCancel={() => router.push('/')}
-      />
-    );
-  }
 
   if (!hydrated) {
     return <div style={{ minHeight: '100vh', backgroundColor: BG }} />;

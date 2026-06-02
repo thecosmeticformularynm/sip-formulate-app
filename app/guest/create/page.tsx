@@ -20,7 +20,7 @@ export default function CreatePage() {
   const router = useRouter();
   const { setProductName, setScentName, setActiveName, completeStep } = useStore();
 
-  const [phase, setPhase] = useState<Phase>('intro');
+  const [phase, setPhase] = useState<Phase>('steps');
   const [introFrame, setIntroFrame] = useState(0);
   const [nameValue, setNameValue] = useState('');
   const [scentValue, setScentValue] = useState('');
