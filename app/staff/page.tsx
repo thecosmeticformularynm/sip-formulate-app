@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { useStore } from '@/lib/store';
 import {
   useStaffStore,
@@ -265,6 +266,9 @@ function Sidebar({ tab, setTab, onSignOut }: { tab: Tab; setTab: (t: Tab) => voi
       className="staff-sidebar"
     >
       <div style={{ padding: '0 28px', marginBottom: 36 }}>
+        <button onClick={() => router.push('/')} style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', display: 'flex', justifyContent: 'center', width: '100%', marginBottom: 20 }}>
+          <Image src="/tcf-logo-white.svg" alt="The Cosmetic Formulary" width={44} height={44} style={{ opacity: 0.75 }} />
+        </button>
         <p style={{ fontFamily: 'var(--font-cormorant)', fontSize: 22, color: '#FAF7F2', fontWeight: 300, letterSpacing: '-0.01em' }}>Sip & Formulate</p>
         <p style={{ fontSize: 9, letterSpacing: '0.25em', textTransform: 'uppercase', color: GOLD, marginTop: 4, fontFamily: 'var(--font-inter)' }}>Command Center</p>
         <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', marginTop: 12, fontFamily: 'var(--font-inter)' }}>
