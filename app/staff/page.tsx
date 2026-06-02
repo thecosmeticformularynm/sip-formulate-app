@@ -193,16 +193,10 @@ function Pill({ children, color = GOLD, style }: { children: React.ReactNode; co
 
 export default function StaffPage() {
   const router = useRouter();
-  const { staffAuthed, setStaffAuthed } = useStore();
+  const { setStaffAuthed } = useStore();
   const [tab, setTab] = useState<Tab>('overview');
-  const [hydrated, setHydrated] = useState(false);
 
-  useEffect(() => { setHydrated(true); setStaffAuthed(true); }, []);
-
-
-  if (!hydrated) {
-    return <div style={{ minHeight: '100vh', backgroundColor: BG }} />;
-  }
+  useEffect(() => { setStaffAuthed(true); }, [setStaffAuthed]);
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: BG, display: 'flex' }}>

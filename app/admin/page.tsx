@@ -1,11 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useStore } from '@/lib/store';
-import PinEntry from '@/components/PinEntry';
 import PageTransition from '@/components/PageTransition';
-
-const ADMIN_PIN = '0000';
 
 const NAV_ITEMS = [
   { href: '/admin/media', label: 'Media Manager', desc: 'Background photos & videos per page' },
@@ -26,7 +22,6 @@ const STATS = [
 
 export default function AdminPage() {
   const router = useRouter();
-  const { adminAuthed, setAdminAuthed } = useStore();
 
 
   return (

@@ -53,7 +53,7 @@ export default function DonePage() {
           onClick={() => { resetGuestSession(); router.push('/'); }}
           style={{ background: 'none', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 100, padding: '16px 40px', fontSize: 12, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', cursor: 'pointer' }}
         >
-          Start again
+          Return to Home
         </button>
       </motion.div>
     </div>
