@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: #F4EFE6;
+  --color-surface: #FAF7F2;
+  --color-surface-2: #EDE8DE;
+  --color-text-primary: #1C1917;
+  --color-text-secondary: #78716C;
+  --color-text-tertiary: #A8A29E;
+  --color-gold: #B8962E;
+  --color-gold-light: #D4AF6A;
+  --color-blush: #E8D5CC;
+  --color-border: #E2D9CE;
+  --color-border-light: #EDE8E0;
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+/* Utility classes used throughout */
+.serif { font-family: var(--font-serif), Georgia, serif; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Signature canvas */
+canvas.signature-canvas {
+  touch-action: none;
+  cursor: crosshair;
+}
+
+/* Animated bottle fill */
+@keyframes fillUp {
+  from { height: 0%; }
+  to { height: 75%; }
+}
+
+.bottle-fill {
+  animation: fillUp 1.2s ease-out forwards;
+}
+
+/* Pulsing border for help needed — warm amber, not red */
+@keyframes pulseAmber {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(184,150,46,0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(184,150,46,0); }
+}
+
+.needs-help-pulse {
+  animation: pulseAmber 2s ease-in-out infinite;
+}
