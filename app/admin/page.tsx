@@ -39,11 +39,11 @@ export default function AdminPage() {
             <p className="text-xs tracking-widest uppercase mt-0.5" style={{ color: 'var(--color-text-tertiary)' }}>Sip & Formulate</p>
           </div>
           <button
-            onClick={() => setAdminAuthed(false)}
+            onClick={() => router.push('/')}
             className="text-sm px-5 py-2.5 rounded-full"
             style={{ border: '1px solid var(--color-border)', color: 'var(--color-text-secondary)', cursor: 'pointer', background: 'transparent', minHeight: 40 }}
           >
-            Sign Out
+            ← Home
           </button>
         </div>
 
