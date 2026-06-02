@@ -211,30 +211,24 @@ export default function Home() {
         </motion.a>
       </motion.div>
 
-      {/* Bottom micro-text */}
-      <div className="relative z-10 pb-10 flex justify-center">
+      {/* Bottom bar — staff & admin access */}
+      <div className="relative z-10 pb-6" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0 28px 28px' }}>
+        <button
+          onClick={() => router.push('/admin')}
+          style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 100, padding: '10px 22px', color: 'rgba(255,255,255,0.4)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', cursor: 'pointer' }}
+        >
+          Admin
+        </button>
         <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.14)', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
           Luxury atelier · Charleston, SC
         </p>
+        <button
+          onClick={() => router.push('/staff')}
+          style={{ background: 'rgba(255,255,255,0.07)', border: '1px solid rgba(255,255,255,0.12)', borderRadius: 100, padding: '10px 22px', color: 'rgba(255,255,255,0.4)', fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', cursor: 'pointer' }}
+        >
+          Staff
+        </button>
       </div>
-
-      {/* Staff access — very subtle */}
-      <button
-        onClick={() => router.push('/staff')}
-        className="absolute bottom-5 right-7 text-xs"
-        style={{ color: 'rgba(255,255,255,0.09)', background: 'none', border: 'none', cursor: 'default', letterSpacing: '0.08em' }}
-      >
-        Staff
-      </button>
-
-      {/* Hidden admin dot */}
-      <button
-        onClick={() => router.push('/admin')}
-        aria-label="Admin"
-        style={{ position: 'absolute', bottom: 5, left: '50%', transform: 'translateX(-50%)', background: 'none', border: 'none', color: 'rgba(255,255,255,0.06)', fontSize: 18, cursor: 'default', padding: 4 }}
-      >
-        ·
-      </button>
     </div>
   );
 }
