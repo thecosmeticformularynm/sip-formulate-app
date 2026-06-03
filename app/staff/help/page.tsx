@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useStore } from '@/lib/store';
 import PinEntry from '@/components/PinEntry';
@@ -87,6 +88,9 @@ export default function StaffHelpPage() {
           >
             {open.length} open
           </span>
+          <button onClick={() => router.push('/')} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}>
+            <Image src="/tcf-logo-black.svg" alt="The Cosmetic Formulary" width={28} height={28} style={{ opacity: 0.35 }} />
+          </button>
         </div>
 
         {/* Requests */}

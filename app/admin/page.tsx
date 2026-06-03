@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
 
 const NAV_ITEMS = [
@@ -38,6 +39,7 @@ export default function AdminPage() {
             </h1>
             <p className="text-xs tracking-widest uppercase mt-0.5" style={{ color: 'var(--color-text-tertiary)' }}>Sip & Formulate</p>
           </div>
+          <Image src="/tcf-logo-black.svg" alt="" width={36} height={36} style={{ opacity: 0.4 }} />
           <button
             onClick={() => router.push('/')}
             className="text-sm px-5 py-2.5 rounded-full"

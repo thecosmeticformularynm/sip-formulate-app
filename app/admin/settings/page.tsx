@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { useStore } from '@/lib/store';
 import PinEntry from '@/components/PinEntry';
 import PageTransition from '@/components/PageTransition';
@@ -63,6 +64,9 @@ export default function SettingsPage() {
             style={{ backgroundColor: 'var(--color-gold)', color: '#1C1917', minHeight: 44, padding: '0 24px', borderRadius: 100, border: 'none', fontSize: 11, letterSpacing: '0.15em', fontWeight: 500, cursor: 'pointer' }}
           >
             {saved ? 'Saved' : 'Save Settings'}
+          </button>
+          <button onClick={() => router.push('/')} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}>
+            <Image src="/tcf-logo-black.svg" alt="The Cosmetic Formulary" width={28} height={28} style={{ opacity: 0.35 }} />
           </button>
         </div>
 

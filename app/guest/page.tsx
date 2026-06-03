@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const ATTRACT_ITEMS = [
   { name: 'Charleston Jasmine', tagline: 'Southern. Floral. Elevated.' },
@@ -34,7 +35,8 @@ export default function GuestAttractPage() {
       onClick={() => router.push('/guest/welcome')}
     >
       {/* Top wordmark */}
-      <div className="pt-16 text-center">
+      <div className="pt-16 text-center flex flex-col items-center">
+        <Image src="/tcf-logo-white.svg" alt="The Cosmetic Formulary" width={52} height={52} style={{ opacity: 0.7, marginBottom: 16 }} />
         <h1
           className="text-4xl tracking-widest"
           style={{ fontFamily: 'var(--font-cormorant)', color: 'rgba(201,168,76,0.8)' }}

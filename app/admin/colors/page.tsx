@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { useStore } from '@/lib/store';
 import { COLORS, Color } from '@/lib/data';
 import PinEntry from '@/components/PinEntry';
@@ -41,6 +42,9 @@ export default function ColorsAdminPage() {
           <h1 className="text-2xl flex-1" style={{ fontFamily: 'var(--font-cormorant)' }}>Colors</h1>
           <button onClick={openNew} className="px-4 py-2 rounded-xl text-sm font-medium text-white" style={{ backgroundColor: 'var(--color-gold)', minHeight: 44 }}>
             + Add Color
+          </button>
+          <button onClick={() => router.push('/')} style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center' }}>
+            <Image src="/tcf-logo-black.svg" alt="The Cosmetic Formulary" width={28} height={28} style={{ opacity: 0.35 }} />
           </button>
         </div>
 
